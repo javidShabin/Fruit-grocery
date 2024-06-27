@@ -1,20 +1,17 @@
 import React, {useState} from 'react'
 import { logo } from '../assets'
-import ToggleBar from './ToggleBar'
 
 function Header() {
-    // Manu bar controlling state
-    const [menuBar, setMenuBar] = useState(true)
+    const [showToggleBar, setShowToggleBar] = useState("")
 
     // Menu bar controlling function
     const handleMenuBar = () => {
-        // Controlling with chenking condition
-        setMenuBar(prevState => (prevState === false? true : false))
+        setShowToggleBar(prevState => (prevState === "" ? "active" : ""))
     }
   return (
     <>
         <header className='flex justify-center items-center w-full h-[90px] shadow-lg'>
-            <div className="container w-[90%] flex justify-between items-center">
+            <div className="container w-[90%] flex justify-between items-center relative">
                 <div className="logo flex items-center">
                 <img src={logo} className='w-10'/>
                     <span><b>Groce</b></span>
@@ -29,8 +26,17 @@ function Header() {
                     <i class="ri-user-fill"></i>
                     <i class="ri-shopping-cart-2-fill"></i>
                 </div>
-                {/* Toggle manu bar */}
-                {menuBar && <ToggleBar/>}
+
+                {/* Toggle Bar */}
+                <div className="toggle-bar absolute top-[75px] bg-[#ebebeba6] w-full h-[50vh] rounded-lg flex justify-center items-center md:hidden">
+                <ul className=''>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Items</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                </div>
+            
                 <div className="toggle-icon text-2xl font-semibold md:hidden">
                     <i class="ri-menu-fill cursor-pointer" onClick={handleMenuBar}></i>
                 </div>
