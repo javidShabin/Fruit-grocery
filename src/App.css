@@ -3,3 +3,14 @@
 *{
     font-family: "Kanit", sans-serif;
 }
+
+/* Toggle bar showing class */
+.toggle-bar{
+    transform: translateY(-120%);
+    opacity: 0;
+    transition: 0.3s;
+}
+.toggle-bar.active{
+    transform: translateY(0);
+    opacity: 1;
+}
