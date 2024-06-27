@@ -1,7 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { logo } from '../assets'
+import ToggleBar from './ToggleBar'
 
 function Header() {
+    // Manu bar controlling state
+    const [menuBar, setMenuBar] = useState(true)
+
+    // Menu bar controlling function
+    const handleMenuBar = () => {
+        // Controlling with chenking condition
+        setMenuBar(prevState => (prevState === false? true : false))
+    }
   return (
     <>
         <header className='flex justify-center items-center w-full h-[90px] shadow-lg'>
@@ -20,8 +29,10 @@ function Header() {
                     <i class="ri-user-fill"></i>
                     <i class="ri-shopping-cart-2-fill"></i>
                 </div>
+                {/* Toggle manu bar */}
+                {menuBar && <ToggleBar/>}
                 <div className="toggle-icon text-2xl font-semibold md:hidden">
-                    <i class="ri-menu-fill cursor-pointer"></i>
+                    <i class="ri-menu-fill cursor-pointer" onClick={handleMenuBar}></i>
                 </div>
             </div>
         </header>
