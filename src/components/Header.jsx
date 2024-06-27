@@ -4,6 +4,7 @@ import { logo } from '../assets'
 function Header() {
     const [showToggleBar, setShowToggleBar] = useState("")
 
+    // Toggle bar function state managing
     const handleMenuBar = () => {
         setShowToggleBar(prevState => (prevState === "" ? "active" : ""))
     }
@@ -42,6 +43,7 @@ function Header() {
                 </div>
             
                 <div className="toggle-icon text-2xl font-semibold md:hidden">
+                    {/* Toggle menu button */}
                     <i className="ri-menu-fill cursor-pointer" onClick={handleMenuBar}></i>
                 </div>
             </div>
