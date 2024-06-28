@@ -10,7 +10,7 @@ function Header() {
     }
   return (
     <>
-        <header className='flex justify-center items-center w-full h-[90px] shadow-lg'>
+        <header className='flex bg-white justify-center items-center w-full h-[90px] shadow-lg sticky top-0 left-0'>
             <div className="container w-[90%] flex justify-between items-center relative">
                 <div className="logo flex items-center">
                 <img src={logo} className='w-10'/>
