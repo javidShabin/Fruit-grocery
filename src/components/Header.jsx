@@ -28,8 +28,8 @@ function Header() {
                 </div>
 
                 {/* Toggle Bar */}
-                <div className={`toggle-bar ${showToggleBar} absolute top-[75px] bg-[#ebebeba6] w-full h-[50vh] rounded-lg flex justify-center items-center md:hidden`}>
-                <ul className='text-lg'>
+                <div className={`toggle-bar ${showToggleBar} absolute top-[75px] bg-[#020202c7] w-full h-[50vh] rounded-lg flex justify-center items-center md:hidden`}>
+                <ul className='text-lg text-[#fff]'>
                     <li><a href="#">Home</a></li>
                     <li className='mt-8'><a href="#">About</a></li>
                     <li className='mt-8'><a href="#">Items</a></li>
