@@ -1,4 +1,4 @@
-import React from "react";
+
 import { heroImg } from "../assets";
 import { bg } from "../assets";
 
@@ -16,9 +16,9 @@ export default function Hero() {
           <p className="text-[10px]text-[#7e7e7e] md:text-[20px] text-[#7f7f7f] text-center">
             Save up to 60% off on your first order
           </p>
-          <div className="bg-[#fff] w-[300px]">
-            <input type="text" className="w-[80%] md:w-[90%] border-0 outline-0" />
-            <button className="bg-[#60b8fc]">Search</button>
+          <div className="bg-[#fff] w-[300px] mt-10 md:mb-10 rounded-lg py-2">
+            <input type="text" className="w-[80%] md:w-[80%] border-0 outline-0 rounded-lg" />
+            <button className="bg-[#60b8fc] rounded-lg font-[16px]">Search</button>
           </div>
         </div>
         <div className="">
