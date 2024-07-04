@@ -16,7 +16,7 @@ export default function Body() {
       <Header />
       <Hero />
       <div className="category w-full flex justify-center items-center mt-10">
-        <div className="container grid grid-cols-1 w-[90%]  md:grid-cols-7">
+        <div className="container grid grid-cols-2 w-[90%]  md:grid-cols-7">
         {catData}
         </div>
       </div>
