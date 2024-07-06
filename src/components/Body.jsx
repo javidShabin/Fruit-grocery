@@ -2,6 +2,7 @@ import Category from "./Category";
 import Header from "./Header";
 import Hero from "./Hero";
 import categoriData from "./CategoriData";
+import Product from "./Product";
 
 export default function Body() {
 
@@ -20,6 +21,7 @@ export default function Body() {
         {catData}
         </div>
       </div>
+      <Product/>
     </>
   );
 }
