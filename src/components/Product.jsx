@@ -1,6 +1,11 @@
 import React from 'react'
+import productData from './ProductData'
+import Fproducts from './Fproducts'
 
 export default function Product() {
+    const product = productData.map((items) => {
+        return <Fproducts key={items.id} images={items.imgSrc} productName={items.name} />
+    })
   return (
    <div className='w-full'>
     <div className="container flex justify-between px-[50px] mt-6">
@@ -13,6 +18,13 @@ export default function Product() {
         <li>Meat</li>
     </ul>
     </div>
+
+<div className="product w-full flex justify-center items-center text-center">
+    <div className="container w-[90%] grid grid-cols-5 gap-6">
+        {product}
+    </div>
+</div>
+
    </div>
   )
 }
