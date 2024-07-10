@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import { logo } from '../assets'
+import CartPage from './CartPage'
 
 function Header() {
     const [showToggleBar, setShowToggleBar] = useState("")
@@ -8,9 +9,16 @@ function Header() {
     const handleMenuBar = () => {
         setShowToggleBar(prevState => (prevState === "" ? "active" : ""))
     }
+
+    const openCart = (event) =>{
+        if (event.target.className === "ri-shopping-cart-2-fill") {
+           alert("redy")
+        }
+    }
+
   return (
     <>
-        <header className='flex bg-white justify-center items-center w-full h-[90px] shadow-lg sticky top-0 left-0'>
+        <header className='flex bg-white justify-center items-center w-full h-[90px] shadow-lg sticky top-0 left-0'  onClick={openCart} >
             <div className="container w-[90%] flex justify-between items-center relative">
                 <div className="logo flex items-center">
                 <img src={logo} className='w-10'/>
