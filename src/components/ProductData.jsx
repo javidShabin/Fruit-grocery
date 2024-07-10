@@ -4,27 +4,27 @@ const productData = [
     {
         id: 1,
         imgSrc: product1,
-        name: "name"
+        name: "Redish 500g"
     },
     {
         id: 2,
         imgSrc: product2,
-        name: "name"
+        name: "Potatos 1kg"
     },
     {
         id: 3,
         imgSrc: product3,
-        name: "name"
+        name: "Tomatos 200g"
     },
     {
         id: 4,
         imgSrc: product4,
-        name: "name"
+        name: "Broccoli 1kg"
     },
     {
         id: 5,
         imgSrc: product5,
-        name: "name"
+        name: "Green Beans 250g"
     }
 ]
 

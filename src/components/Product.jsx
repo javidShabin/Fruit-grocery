@@ -19,7 +19,7 @@ export default function Product() {
     </ul>
     </div>
 
-<div className="product w-full flex justify-center items-center text-center">
+<div className="product w-full flex justify-center text-justify">
     <div className="container w-[90%] grid grid-cols-5 gap-6">
         {product}
     </div>
