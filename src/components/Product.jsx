@@ -20,7 +20,7 @@ export default function Product() {
     </div>
 
 <div className="product w-full flex justify-center text-justify">
-    <div className="container w-[90%] grid grid-cols-1 md:grid-cols-5 gap-6 ">
+    <div className="container grid grid-cols-1 md:grid-cols-5 gap-6 w-[90%] ">
         {product}
     </div>
 </div>
