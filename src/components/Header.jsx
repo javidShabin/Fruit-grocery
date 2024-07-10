@@ -1,6 +1,5 @@
 import {useState} from 'react'
 import { logo } from '../assets'
-import CartPage from './CartPage'
 
 function Header() {
     const [showToggleBar, setShowToggleBar] = useState("")
