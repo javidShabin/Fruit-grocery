@@ -4,7 +4,7 @@ import Fproducts from './Fproducts'
 
 export default function Product() {
     const product = productData.map((items) => {
-        return <Fproducts key={items.id} images={items.imgSrc} productName={items.name} />
+        return <Fproducts key={items.id} images={items.imgSrc} productName={items.name} productPrice={items.price} />
     })
   return (
    <div className='w-full'>
@@ -20,7 +20,7 @@ export default function Product() {
     </div>
 
 <div className="product w-full flex justify-center text-justify">
-    <div className="container w-[90%] grid grid-cols-5 gap-6">
+    <div className="container w-[90%] grid grid-cols-1 md:grid-cols-5 gap-6 ">
         {product}
     </div>
 </div>
