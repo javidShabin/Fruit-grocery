@@ -2,6 +2,11 @@ import React from "react";
 
 export default function Fproducts(props) {
   const { images, productName, productPrice } = props;
+
+  const addToCart = () => {
+    alert("Redy to cart")
+  }
+
   return (
     <>
       <div className="wrapper border flex justify-center h-[280px] mt-10 ">
@@ -28,7 +33,7 @@ export default function Fproducts(props) {
           <span>By:Mfood</span>
           <div className="flex justify-between mt-2">
             <p>{productPrice}$</p>
-            <button className="bg-blue-400 py-1 px-2 rounded-md ">
+            <button onClick={addToCart} className="bg-blue-400 py-1 px-2 rounded-md ">
               <i class="ri-shopping-cart-2-line"></i>Add
             </button>
           </div>
