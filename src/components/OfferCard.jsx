@@ -42,23 +42,5 @@ export default function OfferCard() {
         </div>
       </div>
     </div>
-    // <div className="mx-auto">
-    //   <div className="container grid grid-cols-2">
-    //     <div
-    //       className="hero bg-cover bg-center w-[600px] bg-orange-200"
-    //       style={{  }}
-    //     >
-
-    //       <img src={offer1} alt="" />
-    //     </div>
-
-    //     <div
-    //       className="hero bg-cover bg-center w-[600px] bg-green-200"
-    //       style={{ backgroundImage: `url(${offerBg})` }}
-    //     >
-    //       <img src={offer2} alt="" />
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
