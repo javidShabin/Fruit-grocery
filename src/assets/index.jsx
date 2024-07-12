@@ -23,5 +23,7 @@ import product5 from "./product5.png";
 // Offer card images
 import offer1 from "./offer1-img.png"
 import offer2 from "./offer2-img.png"
+import offerBg from "./offerBg.png"
 
-export { logo, bg, heroImg, cat1, cat2, cat3, cat4, cat5, cat6, cat7, product1, product2, product3, product4, product5, offer1, offer2 };
+
+export { logo, bg, heroImg, cat1, cat2, cat3, cat4, cat5, cat6, cat7, product1, product2, product3, product4, product5, offer1, offer2, offerBg };
