@@ -11,12 +11,12 @@ export default function OfferCard() {
         >
           <div>
             <label className="py-1 px-2 bg-orange-400 text-white leading-[50px]">Free Delivery</label>
-            <h2 className="text-[30px] text-blue-950">Free delivery over $50</h2>
-            <p className="text-gray-600">
+            <h2 className="text-[30px] text-blue-950 mt-4">Free delivery over $50</h2>
+            <p className="text-gray-600 mt-4">
               Shop $50 product and get free <br />
               delivery anywhere.
             </p>
-            <button className="py-1 px-2 bg-blue-600 text-white">Shop Now</button>
+            <button className="py-1 px-2 bg-blue-600 text-white mt-4">Shop Now</button>
           </div>
           <div>
             <img src={offer1} alt="" />
@@ -29,12 +29,12 @@ export default function OfferCard() {
         >
           <div className="ml-5">
             <label className="py-1 px-2 bg-green-400 text-white leading-[50px]">60% Off</label>
-            <h2 className="text-[30px] text-blue-950">Organic Food</h2>
-            <p className="text-gray-600">
+            <h2 className="text-[30px] text-blue-950 mt-4">Organic Food</h2>
+            <p className="text-gray-600 mt-4">
               Save up to 60% off on your <br />
               first order
             </p>
-            <button className="py-1 px-2 bg-blue-600 text-white">Shop Now</button>
+            <button className="py-1 px-2 bg-blue-600 text-white mt-4">Shop Now</button>
           </div>
           <div className="mt-8">
             <img src={offer2} alt="" />
