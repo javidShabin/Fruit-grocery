@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 export default function CartPage() {
   return (
-    <div className='w-[400px] h-[600px] bg-[#d2fffe] '>
-      <h1>Cart Page</h1>
-    </div>
-  )
+    <>
+      <div className="w-[400px] h-[600px] bg-[#d2fffe] text-center">
+        <h1 className="text-[20px] font-semibold">Cart Page</h1>
+      </div>
+    </>
+  );
 }
