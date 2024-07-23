@@ -1,23 +1,23 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import { logo } from '../assets'
+import CartPage from './CartPage'
 
 function Header() {
-    const [showToggleBar, setShowToggleBar] = useState("")
 
-    // Toggle bar function state managing
-    const handleMenuBar = () => {
-        setShowToggleBar(prevState => (prevState === "" ? "active" : ""))
-    }
+    let [showBar, setShowBAr] = useState(false)
 
-    const openCart = (event) =>{
-        if (event.target.className === "ri-shopping-cart-2-fill") {
-           alert("redy")
+    console.log(showBar)
+
+    const showToggleBar = (event) => {
+        const postionClick = event.target.className
+        if (postionClick === "ri-shopping-cart-2-fill") {
+            setShowBAr(true)
         }
     }
 
   return (
     <>
-        <header className='flex bg-white justify-center items-center w-full h-[90px] shadow-lg sticky top-0 left-0'  onClick={openCart} >
+        <header className='flex bg-white justify-center items-center w-full h-[90px] shadow-lg sticky top-0 left-0' onClick={showToggleBar}>
             <div className="container w-[90%] flex justify-between items-center relative">
                 <div className="logo flex items-center">
                 <img src={logo} className='w-10'/>
@@ -34,16 +34,15 @@ function Header() {
                     <i className="ri-shopping-cart-2-fill"></i>
                 </div>
 
-                {/* Toggle Bar */}
-                <div className={`toggle-bar ${showToggleBar} absolute top-[75px] bg-[#020202c7] w-full h-[50vh] rounded-lg flex justify-center items-center md:hidden`}>
+                <div className={`absolute top-[75px] bg-[#020202c7] w-full h-[50vh] rounded-lg flex justify-center items-center md:hidden`}>
                 <ul className='text-lg text-[#fff]'>
                     <li><a href="#">Home</a></li>
                     <li className='mt-8'><a href="#">About</a></li>
                     <li className='mt-8'><a href="#">Items</a></li>
                     <li className='mt-8'><a href="#">Contact</a></li>
-                <div className="icons mt-8">
+                <div className="icons mt-8" >
                     <i className="ri-user-fill mr-5 text-xl"></i>
-                    <i className="ri-shopping-cart-2-fill text-xl"></i>
+                    <i className="ri-shopping-cart-2-fill text-xl" ></i>
                 </div>
                 </ul>
                 
@@ -51,7 +50,12 @@ function Header() {
             
                 <div className="toggle-icon text-2xl font-semibold md:hidden">
                     {/* Toggle menu button */}
-                    <i className="ri-menu-fill cursor-pointer" onClick={handleMenuBar}></i>
+                    <i className="ri-menu-fill cursor-pointer"></i>
+                </div>
+
+                {/* Toggle bar */}
+                <div className='absolute top-[65px] right-[-75px] '>
+                <CartPage/>
                 </div>
             </div>
         </header>

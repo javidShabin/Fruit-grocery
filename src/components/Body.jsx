@@ -5,25 +5,25 @@ import categoriData from "./CategoriData";
 import Product from "./Product";
 import OfferCard from "./OfferCard";
 
-export default function Body() {
 
-    const catData = categoriData.map(items => {
-        return(
-            <Category key={items.id} catItems={items} />
-        )
-    })
+export default function Body() {
+  const catData = categoriData.map((items) => {
+    return <Category key={items.id} catItems={items} />;
+  });
 
   return (
     <>
       <Header />
-      <Hero />
-      <div className="category w-full flex justify-center items-center mt-10">
-        <div className="container grid grid-cols-2 w-[90%]  md:grid-cols-7">
-        {catData}
+      <div className="overflow-hidden">
+        <Hero />
+        <div className="category w-full flex justify-center items-center mt-10">
+          <div className="container grid grid-cols-2 w-[90%]  md:grid-cols-7">
+            {catData}
+          </div>
         </div>
+        <Product />
+        <OfferCard />
       </div>
-      <Product/>
-      <OfferCard/>
     </>
   );
 }

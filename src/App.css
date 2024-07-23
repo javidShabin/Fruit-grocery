@@ -6,11 +6,17 @@
 
 /* Toggle bar showing class */
 .toggle-bar{
-    transform: translateY(-120%);
+    width: 400px;
+    height: 600px;
+    background-color: black;
+    position: absolute;
+    top: 65px;
+    right: -75px;
+    opacity: 1;
+    
+}
+.toggle-bar.active{
     opacity: 0;
     transition: 0.3s;
 }
-.toggle-bar.active{
-    transform: translateY(0);
-    opacity: 1;
-}
+
