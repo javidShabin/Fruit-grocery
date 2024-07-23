@@ -1,11 +1,8 @@
 import React from "react";
 
 export default function Fproducts(props) {
+const addToCart = props.addToCart
   const { images, productName, productPrice } = props;
-
-  const addToCart = () => {
-    alert("Redy to cart")
-  }
 
   return (
     <>
@@ -33,7 +30,10 @@ export default function Fproducts(props) {
           <span>By:Mfood</span>
           <div className="flex justify-between mt-2">
             <p>{productPrice}$</p>
-            <button onClick={addToCart} className="bg-blue-400 py-1 px-2 rounded-md ">
+            <button onClick={()=>{addToCart({
+                proImg : images, 
+                proName: productName, 
+                proPrice: productPrice})}} className="bg-blue-400 py-1 px-2 rounded-md ">
               <i class="ri-shopping-cart-2-line"></i>Add
             </button>
           </div>

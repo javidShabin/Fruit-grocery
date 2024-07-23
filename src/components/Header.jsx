@@ -2,10 +2,9 @@ import { useState } from "react";
 import { logo } from "../assets";
 import CartPage from "./CartPage";
 
-function Header() {
+function Header({cartItems}) {
+   console.log(cartItems)
   let [showBar, setShowBar] = useState(true);
-
-  console.log(showBar);
 
   const showToggleBar = (event) => {
     const postionClick = event.target.className;
@@ -76,7 +75,7 @@ function Header() {
 
           {/* Toggle bar */}
           <div className="absolute top-[65px] right-[-75px] ">
-            {showBar && <CartPage />}
+            {showBar && <CartPage  cartItems={cartItems} />}
           </div>
         </div>
       </header>

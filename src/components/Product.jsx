@@ -2,9 +2,10 @@ import React from 'react'
 import productData from './ProductData'
 import Fproducts from './Fproducts'
 
-export default function Product() {
+export default function Product({addToCart}) {
+    
     const product = productData.map((items) => {
-        return <Fproducts key={items.id} images={items.imgSrc} productName={items.name} productPrice={items.price} />
+        return <Fproducts key={items.id} images={items.imgSrc} productName={items.name} productPrice={items.price} addToCart={addToCart}/>
     })
   return (
    <div className='w-full'>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Category from "./Category";
 import Header from "./Header";
 import Hero from "./Hero";
@@ -6,13 +7,20 @@ import Product from "./Product";
 import OfferCard from "./OfferCard";
 
 export default function Body() {
+
+    let [cartItems, setCartItems] = useState([])
+
   const catData = categoriData.map((items) => {
     return <Category key={items.id} catItems={items} />;
   });
 
+  const addToCart = (props) => {
+    setCartItems([...cartItems, props])
+  }
+
   return (
     <>
-      <Header />
+      <Header cartItems={cartItems}/>
       <div className="overflow-hidden">
         <Hero />
         <div className="category w-full flex justify-center items-center mt-10">
@@ -20,7 +28,7 @@ export default function Body() {
             {catData}
           </div>
         </div>
-        <Product />
+        <Product addToCart={addToCart}/>
         <OfferCard />
       </div>
     </>
