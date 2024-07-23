@@ -5,7 +5,6 @@ import categoriData from "./CategoriData";
 import Product from "./Product";
 import OfferCard from "./OfferCard";
 
-
 export default function Body() {
   const catData = categoriData.map((items) => {
     return <Category key={items.id} catItems={items} />;
