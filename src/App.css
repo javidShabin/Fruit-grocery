@@ -4,19 +4,3 @@
     font-family: "Kanit", sans-serif;
 }
 
-/* Toggle bar showing class */
-.toggle-bar{
-    width: 400px;
-    height: 600px;
-    background-color: black;
-    position: absolute;
-    top: 65px;
-    right: -75px;
-    opacity: 1;
-    
-}
-.toggle-bar.active{
-    opacity: 0;
-    transition: 0.3s;
-}
-
