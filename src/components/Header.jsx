@@ -4,7 +4,7 @@ import CartPage from "./CartPage";
 
 function Header({cartItems}) {
    console.log(cartItems)
-  let [showBar, setShowBar] = useState(true);
+  let [showBar, setShowBar] = useState(false);
 
   const showToggleBar = (event) => {
     const postionClick = event.target.className;
