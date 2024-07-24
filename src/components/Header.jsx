@@ -3,13 +3,29 @@ import { logo } from "../assets";
 import CartPage from "./CartPage";
 
 function Header({cartItems}) {
-   console.log(cartItems)
+   
   let [showBar, setShowBar] = useState(false);
 
+  // toggleMenuBar
+  const showMenuBar = () =>{
+    alert("Redy")
+  }
+
+  // In small screen show cart Page
+  const showCartPage = (event) => {
+    const postionClick = event.target.className === "ri-shopping-cart-2-fill text-xl"
+    if (postionClick) {
+        setShowBar((prevShowBar) => !prevShowBar);
+    }
+  }
+
+  // Cart page
   const showToggleBar = (event) => {
     const postionClick = event.target.className;
+    
     if (postionClick === "ri-shopping-cart-2-fill") {
       setShowBar((prevShowBar) => !prevShowBar);
+      
     }
   };
 
@@ -61,16 +77,18 @@ function Header({cartItems}) {
               <li className="mt-8">
                 <a href="#">Contact</a>
               </li>
-              <div className="icons mt-8">
+              <div className="icons mt-8" onClick={showCartPage}>
                 <i className="ri-user-fill mr-5 text-xl"></i>
                 <i className="ri-shopping-cart-2-fill text-xl"></i>
+                {showBar && <CartPage  cartItems={cartItems} />}
               </div>
             </ul>
           </div>
 
           <div className="toggle-icon text-2xl font-semibold md:hidden">
             {/* Toggle menu button */}
-            <i className="ri-menu-fill cursor-pointer"></i>
+            <i className="ri-menu-fill cursor-pointer" onClick={showMenuBar}></i>
+            
           </div>
 
           {/* Toggle bar */}
