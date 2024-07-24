@@ -4,11 +4,12 @@ import CartPage from "./CartPage";
 
 function Header({cartItems}) {
    
+    let [showToggleMenu, setShowToggleMenu] = useState("")
   let [showBar, setShowBar] = useState(false);
 
   // toggleMenuBar
   const showMenuBar = () =>{
-    alert("Redy")
+    setShowToggleMenu(prevState => (prevState === "" ? "active" : ""))
   }
 
   // In small screen show cart Page
@@ -62,7 +63,7 @@ function Header({cartItems}) {
           </div>
 
           <div
-            className={`absolute top-[75px] bg-[#020202c7] w-full h-[50vh] rounded-lg flex justify-center items-center md:hidden`}
+            className={`toggle-bar ${showToggleMenu} absolute top-[75px] bg-[#020202c7] w-full h-[50vh] rounded-lg flex justify-center items-center md:hidden`}
           >
             <ul className="text-lg text-[#fff]">
               <li>
