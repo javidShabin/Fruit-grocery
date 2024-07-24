@@ -33,8 +33,8 @@ const addToCart = props.addToCart
             <button onClick={()=>{addToCart({
                 proImg : images, 
                 proName: productName, 
-                proPrice: productPrice})}} className="bg-blue-400 py-1 px-2 rounded-md ">
-              <i class="ri-shopping-cart-2-line"></i>Add
+                proPrice: productPrice})}} className="bg-blue-400 py-1 px-2 rounded-md pointer duration-150 ease-in-out hover:bg-blue-500">
+              <i class="ri-shopping-cart-2-line hover:text-gray-800"></i>Add
             </button>
           </div>
         </div>
