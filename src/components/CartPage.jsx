@@ -1,6 +1,17 @@
 import React from "react";
 
 export default function CartPage({ cartItems }) {
+
+    console.log(cartItems)
+
+    const orderNowFunc = () => {
+        if (!cartItems) {
+            alert("Redy")
+        }else{
+            alert("Not Redy")
+        }
+    }
+
   return (
     <>
       <div className="w-[450px] h-[610px] bg-[#3c3c3c] text-center rounded-sm relative">
@@ -22,7 +33,12 @@ export default function CartPage({ cartItems }) {
             );
           })}
         </div>
-        <button className="absolute bottom-3 left-3 bg-yellow-500 text-white rounded-md text-[15px] py-1 px-4">Order Now</button>
+        <button onClick={orderNowFunc}
+          className="absolute bottom-3 left-3 bg-yellow-500 
+        text-white rounded-md text-[15px] py-1 px-4"
+        >
+          Order Now
+        </button>
       </div>
     </>
   );
