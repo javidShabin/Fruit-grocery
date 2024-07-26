@@ -6,7 +6,7 @@ export default function OfferCard() {
     <div className="mt-9 px-[50px] ">
       <div className="container flex justify-around">
         <div
-          className="bg-cover bg-center w-[650px] bg-orange-200 flex justify-between items-center px-5 rounded-md"
+          className="bg-cover bg-center w-[650px] bg-[#ffc875] flex justify-between items-center px-5 rounded-md"
           style={{ backgroundImage: `url(${offerBg})` }}
         >
           <div>
@@ -24,7 +24,7 @@ export default function OfferCard() {
         </div>
 
         <div
-          className="bg-cover bg-center w-[650px] bg-green-200 flex justify-between items-center ounded-md"
+          className="bg-cover bg-center w-[650px] bg-[#50c68d] flex justify-between items-center ounded-md"
           style={{ backgroundImage: `url(${offerBg})` }}
         >
           <div className="ml-5">

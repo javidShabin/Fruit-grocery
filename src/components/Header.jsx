@@ -33,7 +33,7 @@ function Header({cartItems}) {
   return (
     <>
       <header
-        className="flex bg-white justify-center items-center w-full h-[90px] shadow-lg sticky top-0 left-0"
+        className="flex bg-white justify-center items-center w-full h-[90px] shadow-lg sticky top-0 left-0 z-50"
         onClick={showToggleBar}
       >
         <div className="container w-[90%] flex justify-between items-center relative">
