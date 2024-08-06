@@ -5,7 +5,6 @@ import Hero from "./Hero";
 import categoriData from "./CategoriData";
 import Product from "./Product";
 import OfferCard from "./OfferCard";
-import Social from "./Social";
 import Timer from "./Timer";
 
 export default function Body() {
@@ -34,7 +33,6 @@ export default function Body() {
         <OfferCard />
       </div>
       <Timer/>
-      <Social/>
     </>
   );
 }

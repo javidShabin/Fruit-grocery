@@ -24,7 +24,7 @@ export default function OfferCard() {
         </div>
 
         <div
-          className="bg-cover bg-center w-[650px] bg-[#50c68d] flex justify-between items-center ounded-md"
+          className="bg-cover bg-center w-[650px] bg-[#50c68d] flex justify-between items-center rounded-md"
           style={{ backgroundImage: `url(${offerBg})` }}
         >
           <div className="ml-5">
